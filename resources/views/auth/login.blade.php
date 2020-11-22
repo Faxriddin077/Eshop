@@ -1,15 +1,15 @@
 @extends('layouts.app')
 
 @section('breadcrumb')
-<div class="bg-gray-200 p-3 rounded text-sm mb-5">
-    <ol class="list-reset flex text-gray-700">
-       <li>
-            <a class="text-gray-700" href="{{ route('home') }}" title="home">
-                {{ __('avored.home') }} >> 
-            </a>
-        </li>
-       <li> <span class="">{{ __('avored.login') }}</span></li>
-    </ol>
+<div class="flex pb-3">
+    <div>
+      <a href="{{ route('home') }}" class="text-gray-700" title="home">
+        {{ __('Home') }} >>
+      </a>
+    </div>
+    <div class="ml-1 text-gray-700">
+        {{ __('Login') }}
+    </div>
 </div>
 @endsection
 
@@ -19,7 +19,7 @@
             <div>
                 <a href="https://avored.com" target="_blank">
                     <img class="mx-auto h-12 w-auto" 
-                        src="{{ asset('/images/logo.svg') }}" 
+                        src="{{ asset('/img/logo.svg') }}"
                         alt="AvoRed Ecommerce" />
                 </a>
                 <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
@@ -64,9 +64,15 @@
                     </div>
 
                     <div class="text-sm leading-5">
-                        <a href="{{ route('password.request') }}" 
+                        <a href="#"
                             class="font-medium text-red-600 hover:text-red-500 focus:outline-none focus:underline">
                             {{ __('avored.pages.login.forgot_password') }}
+                        </a>
+                    </div>
+                    <div class="text-sm leading-5">
+                        <a href="{{ asset('register') }}"
+                           class="font-medium text-red-600 hover:text-red-500 focus:outline-none focus:underline">
+                            {{ __('avored.pages.login.register') }}
                         </a>
                     </div>
                 </div>

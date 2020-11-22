@@ -28,7 +28,7 @@
 <div class="mt-3">
         
         <div>
-            <form action="{{ route('admin.category.store') }}"  method="post">
+            <form action="{{ route('admin.category.store') }}"  method="post" enctype="multipart/form-data">
                 @csrf
 
                 <avored-tabs>
@@ -41,7 +41,14 @@
                         </avored-tab>
                     @endforeach
                 </avored-tabs>
-                
+                <div class="w-full">
+                    <label class="block text-sm leading-5 text-gray-500">
+                        Каталог рисунки
+                    </label>
+                    <div class="mt-1">
+                        <input type="file" name="image" class="fpx-3 flex-1 w-full py-2 outline-none shadow-sm focus:shadow focus:border rounded border block border-gray-400">
+                    </div>
+                </div>
                 
                 <div class="mt-3 py-3">
                     <button type="submit"

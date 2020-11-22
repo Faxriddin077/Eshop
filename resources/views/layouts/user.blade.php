@@ -23,26 +23,30 @@
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     @endif
     {{-- <script src="https://js.stripe.com/v3/"></script> --}}
+
+    <link rel="stylesheet" href="{{asset('css/main.css')}}">
+    <link rel="stylesheet" href="{{asset('css/catalog.css')}}">
+    <link rel="stylesheet" href="{{asset('css/kartochka.css')}}">
+    <link rel="stylesheet" href="{{asset('css/glide.core.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/glide.theme.min.css')}}">
 </head>
 <body>
     <div id="app">
         <avored-layout inline-template>
             <div class="">
-                <div>
-                    @include('partials.nav')
-                    <div class="mt-5 container mx-auto">
-                        @yield('breadcrumb')
-                        <div class="bg-white">
-                            <div class="flex">
-                                <div class="w-40">
-                                    @include('partials.account-nav')
+                @include('partials.nav')
+                <div class="mt-5 container mx-auto">
+                    @include('partials.breadcrumb')
+                    <div class="bg-white">
+                        <div class="flex">
+                            <div class="w-64">
+                                @include('partials.account-nav')
+                            </div>
+                            <div class="flex-1 ml-5">
+                                <div>
+                                    @yield('breadcrumb')
                                 </div>
-                                <div class="flex-1 ml-5">
-                                    <div>
-                                        
-                                    </div>
-                                    @yield('content')
-                                </div>
+                                @yield('content')
                             </div>
                         </div>
                     </div>

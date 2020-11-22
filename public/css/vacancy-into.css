@@ -1,0 +1,50 @@
+.vacancy-into{
+	padding: 0 50px 80px;
+}
+.vacancy-into__title{
+	padding-bottom: 16px;
+	margin-bottom: 50px;
+	border-bottom: 1px solid #E9E9E9;
+	font-size: 24px;
+	line-height: 18px;
+	color: #2B2B2B;
+}
+.vacancy-into__sub-title{
+	padding-bottom: 20px;
+	font-size: 18px;
+	line-height: 24px;
+	letter-spacing: 0.5px;
+	color: #2B2B2B;
+}
+.vacancy-into__list{
+	padding-bottom: 50px;
+	list-style-type: none;
+
+}
+.vacancy-into__item{
+	width: 500px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
+}
+.vacancy-into__line{
+	margin-right: 8px;
+}
+.vacancy-into__text{
+	padding-bottom: 10px;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 25px;
+	color: #6B6B6B;
+}
+.vacancy-into__btn{
+	display: inline-block;
+	padding: 15px 70px;
+	text-decoration: none;
+	background-color: #3B79FF;
+	border-radius: 12px;
+	color: #fff;
+}

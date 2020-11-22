@@ -1,5 +1,7 @@
-@foreach ($categoryFilters as $categoryFilter)        
+
+@foreach ($categoryFilters as $categoryFilter)
     <div class="rounded border">
+
         <div class="border-b p-5">{{ $categoryFilter->filter->name }}</div>
         <div class="p-5">
             @if($categoryFilter->type == 'PROPERTY' && $categoryFilter->filter->use_for_category_filter)

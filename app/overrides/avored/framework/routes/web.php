@@ -200,6 +200,14 @@ Route::middleware(['web', 'admin.auth:admin', 'permission'])
             ->name('report.index');
         Route::post('report/{identifier}', [\AvoRed\Framework\Report\Controllers\ReportController::class, 'results'])
             ->name('report.post');
+
+
+        Route::get('news/create',[\App\Http\Controllers\NewsController::class,'create'])->name('news.create');
+        Route::post('news/index',[\App\Http\Controllers\NewsController::class,'store'])->name('news.store');
+        Route::get('news/index',[\App\Http\Controllers\NewsController::class,'index'])->name('news.index');
+        Route::get('news/{id}/edit',[\App\Http\Controllers\NewsController::class,'edit'])->name('news.edit');
+        Route::post('news/update',[\App\Http\Controllers\NewsController::class,'update'])->name('news.update');
+
     // Route::get(
         //     'promotion-code-edit/{promotionCode?}',
         //     Promotion\Controllers\PromotionCode\EditController::class

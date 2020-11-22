@@ -1,0 +1,49 @@
+.vacancy{
+	padding: 0 50px 50px;
+}
+.vacancy__title{
+	padding-bottom: 16px;
+	margin-bottom: 50px;
+	border-bottom: 1px solid #E9E9E9;
+	font-size: 24px;
+	line-height: 18px;
+	color: #2B2B2B;
+}
+.vacancy__list{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	list-style-type: none;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+.vacancy__item{
+	width: 550px;
+	padding-bottom: 50px;
+}
+.vacancy__name{
+	padding-bottom: 10px;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 24px;
+	letter-spacing: 0.5px;
+	color: #2B2B2B;
+}
+.vacancy__address{
+	padding-bottom: 30px;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 16px;
+	letter-spacing: 0.2px;
+	color: #6B6B6B;
+}
+.vacancy__read-more{
+	text-decoration: none;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 25px;
+	color: #78B347;
+}

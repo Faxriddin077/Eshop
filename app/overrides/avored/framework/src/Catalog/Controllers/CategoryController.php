@@ -7,6 +7,7 @@ use AvoRed\Framework\Database\Models\Category;
 use AvoRed\Framework\Catalog\Requests\CategoryRequest;
 use AvoRed\Framework\Database\Contracts\CategoryModelInterface;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class CategoryController
 {
@@ -60,9 +61,17 @@ class CategoryController
      */
     public function store(CategoryRequest $request)
     {
-        dd('asasas');
-        $this->categoryRepository->create($request->all());
+        $all_data = $request->all();
 
+        if($request->hasFile('image')) {
+            $file = $request->file('image');
+            $uuid = Str::uuid()->toString();
+            $name = $uuid . time() . '.' . $file->extension();
+            $file->move(public_path('../storage/app/public/category/'), $name);
+            $all_data['image'] = '/storage/category/' . $name;
+
+        }
+        $fayl = Category::create($all_data);
         return redirect()->route('admin.category.index')
             ->with('successNotification', __(
                 'avored::system.notification.store',
