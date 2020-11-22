@@ -231,7 +231,7 @@ class ProductController
             'image_model' => $imageModel,
             'message' => __('avored::user.notification.upload', ['attribute' => 'Image']),
         ]);
-        
+
         // return response()->json(['image' => $imageModel]);
     }
 
@@ -302,8 +302,9 @@ class ProductController
      */
     private function saveProductCategory(Product $product, $request)
     {
-        if ($request->get('category') !== null && count($request->get('category')) > 0) {
-            $product->categories()->sync($request->get('category'));
+        $values = array_filter($request->get('category'));
+        if ($values !== null && count($values) > 0) {
+            $product->categories()->sync($values);
         }
     }
 
